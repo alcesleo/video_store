@@ -10,6 +10,9 @@ gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+gem 'administrate'
+gem 'bourbon'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

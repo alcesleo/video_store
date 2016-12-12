@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212095128) do
+ActiveRecord::Schema.define(version: 20161212134100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "dvds", force: :cascade do |t|
+    t.integer  "movie_id",      null: false
+    t.string   "serial_number"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["movie_id"], name: "index_dvds_on_movie_id", using: :btree
+  end
+
+  create_table "movies", force: :cascade do |t|
     t.string   "title",      null: false
     t.integer  "year",       null: false
     t.datetime "created_at", null: false
@@ -30,5 +38,6 @@ ActiveRecord::Schema.define(version: 20161212095128) do
     t.index ["dvd_id"], name: "index_rentals_on_dvd_id", using: :btree
   end
 
+  add_foreign_key "dvds", "movies"
   add_foreign_key "rentals", "dvds"
 end

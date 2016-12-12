@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+braveheart = Dvd.create(title: "Braveheart", year: 1999)
+toy_story  = Dvd.create(title: "Toy Story XVI", year: 2020)
+
+Rental.create(dvd: braveheart, rented_at: Date.today, due_at: Date.today + 7)
+Rental.create(dvd: toy_story, rented_at: Date.today - 1, due_at: Date.today + 6)

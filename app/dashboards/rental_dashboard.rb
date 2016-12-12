@@ -25,6 +25,7 @@ class RentalDashboard < Administrate::BaseDashboard
     :id,
     :rented_at,
     :due_at,
+    :returned_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

@@ -11,6 +11,20 @@
     </div>
   <% end %>
 
+  <p>
+  <%= f.collection_select :dvd_id, Dvd.all, :id, :title %>
+  </p>
+
+  <p>
+  <%= label :rented_at, "Rented date" %>
+  <%= f.date_select :rented_at %>
+  </p>
+
+  <p>
+  <%= label :due_at, "Due" %>
+  <%= f.date_select :due_at %>
+  </p>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -53,6 +53,6 @@ class RentalsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def rental_params
-      params.fetch(:rental, {})
+      params.fetch(:rental, {}).permit(:dvd_id, :rented_at, :due_at)
     end
 end

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <%= @rental.id %>
+<%= @rental.due_at %>
+<%= @rental.returned_at %>
+
 <%= link_to 'Edit', edit_rental_path(@rental) %> |
 <%= link_to 'Back', rentals_path %>
